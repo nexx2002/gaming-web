@@ -1,0 +1,112 @@
+/* styles1.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('my-gaming-website-master/images/the witcher 3.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  color: #fff;
+  padding: 20px 0; /* Increased padding for better spacing */
+  position: relative;
+  animation: fadeInHeader 1s ease forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center align navigation items */
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+  animation: slideInNav 1s ease forwards;
+}
+
+@keyframes slideInNav {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.game {
+  background-color: #6c6868; /* Light grey background color */
+  border-radius: 10px; /* Increased border radius for a smoother appearance */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Improved box shadow for depth */
+  animation: popUpGame 0.5s ease forwards;
+  background-size: cover; /* Make background image cover the entire game container */
+}
+
+@keyframes popUpGame {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game img {
+  max-width: 100%;
+  border-radius: 10px; /* Match border radius of game container */
+  transition: transform 0.3s ease;
+}
+
+.game:hover img {
+  transform: scale(1.05);
+}
+
+.game h3 {
+  margin-top: 20px; /* Increased margin for better separation */
+  font-size: 20px; /* Slightly larger font size for game titles */
+}
+
+.game p {
+  margin-top: 10px;
+  color: #444; /* Darker text color for better readability */
+  font-size: 16px; /* Slightly smaller font size for game descriptions */
+}
